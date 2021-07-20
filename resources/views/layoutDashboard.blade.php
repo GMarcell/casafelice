@@ -68,7 +68,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="bookingList">
+                <a class="nav-link" href="trafficList">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Traffic</span></a>
             </li>
@@ -151,9 +151,7 @@
 
                     <!-- Page Heading -->
 
-                    <div class="container">
-                        @yield('content')
-                    </div>
+                    @yield('content')
 
                 </div>
                 <!-- /.container-fluid -->

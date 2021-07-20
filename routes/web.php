@@ -5,6 +5,7 @@ use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\bookingController;
 use App\Http\Controllers\occupancyController;
 use App\Http\Controllers\pagesController;
+use App\Http\Controllers\trafficController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,10 @@ Route::delete('booking/delete/{id}', [bookingController::class, 'destroy']);
 
 Route::get('occupancyList', [occupancyController::class, 'occupancyList'])->name('occupancyList');
 Route::get('checkInFormEmpty', [occupancyController::class, 'showCheckInForm'])->name('showCheckInForm');
-Route::post('checkIn/new', [occupancyController::class, 'checkIn']);
+Route::post('checkIn', [occupancyController::class, 'checkIn']);
+Route::delete('checkin/cancel/{id}', [occupancyController::class, 'delete']);
+
+Route::get('trafficList', [trafficController::class, 'trafficList'])->name('trafficList');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

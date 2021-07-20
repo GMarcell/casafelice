@@ -85,4 +85,11 @@ class occupancyController extends Controller
             return redirect()->route('occupancyList');
         }
     }
+
+    public function delete($id)
+    {
+        $data = occupancys::findOrFail($id);
+        $data->delete();
+        return redirect('occupancyList')->with('success', 'Data is successfully deleted');
+    }
 }

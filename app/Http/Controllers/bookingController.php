@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\occupancys;
 use App\Models\roomBookings;
+use App\Models\traffics;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -82,12 +83,26 @@ class bookingController extends Controller
         $occupancy->email = $request->email;
         $occupancy->check_in_date = $request->check_in_date;
         $occupancy->check_out_date = $request->check_out_date;
-        $simpan = $occupancy->save();
+        $simpanOccupancy = $occupancy->save();
+
+        $traffics = new traffics;
+        $traffics->name = ucwords(strtolower($request->name));
+        $traffics->tanda_pengenal = $request->tanda_pengenal;
+        $traffics->gender = $request->gender;
+        $traffics->address = $request->address;
+        $traffics->room_number = $request->room_number;
+        $traffics->source = $request->source;
+        $traffics->room_type = $request->room_type;
+        $traffics->no_telephone = $request->no_telephone;
+        $traffics->email = $request->email;
+        $traffics->check_in_date = $request->check_in_date;
+        $traffics->check_out_date = $request->check_out_date;
+        $simpanTraffics = $traffics->save();
 
         $data = roomBookings::findOrFail($id);
         $data->delete();
 
-        if ($simpan) {
+        if ($simpanOccupancy && $simpanTraffics) {
             Session::flash('success', 'Check In Berhasil');
             return redirect()->route('bookingList');
         } else {
@@ -107,7 +122,7 @@ class bookingController extends Controller
     {
         $rules = [
             'name'              => 'required',
-            'check_in_date'     => 'required|date|after:today',
+            'check_in_date'     => 'required|date|after:yesterday',
             'check_out_date'    => 'required|date|after:check_in_date',
             'room_type'         => 'required'
         ];
