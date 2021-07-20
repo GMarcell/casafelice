@@ -82,7 +82,7 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="bookingList">
+                <a class="nav-link" href="Laporan Keuangan">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Laporan Keuangan</span></a>
             </li>
