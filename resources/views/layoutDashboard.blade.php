@@ -82,11 +82,16 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="Laporan Keuangan">
+                <a class="nav-link" href="Laporan_Keuangan">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Laporan Keuangan</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="inventoriList">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Laporan Inventory</span></a>
+            </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
