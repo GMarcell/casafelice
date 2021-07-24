@@ -41,6 +41,7 @@ Route::delete('checkin/cancel/{id}', [occupancyController::class, 'delete']);
 Route::get('trafficList', [trafficController::class, 'trafficList'])->name('trafficList');
 
 Route::get('inventoriList', [inventoriController::class, 'inventorilist'])->name('inventorilist');
+Route::get('inventoriForm', [inventoriController::class, 'showinventoriForm'])->name('showinventoriForm');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

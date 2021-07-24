@@ -4,7 +4,7 @@
 
 <h1 class="h4 text-gray-800">List inventori</h1>
 
-<a href="inventoriForm" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;" href> </a>
+<a href="inventoriForm" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;" href='inventoriForm'>Input Barang </a>
 
 @if ($messages = Session::get('success'))
 <p>{{ $messages}}</p>

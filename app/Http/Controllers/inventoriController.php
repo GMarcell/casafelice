@@ -19,4 +19,9 @@ class inventoriController extends Controller
         ];
         return view('inventoriList', $data);
     }
+
+    public function showinventoriForm()
+    {
+        return view('inventoriForm');
+    }
 }
