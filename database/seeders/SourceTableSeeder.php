@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class GenderTableSeeder extends Seeder
+class SourceTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,10 +14,10 @@ class GenderTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('gender')->insert([
-            'gender_type' => stringValue('Male')
+        DB::table('source')->insert([
+            'source_name' => stringValue('On The Spot')
         ], [
-            'gender_type' => stringValue('Female')
+            'source_name' => stringValue('Online Travel Agent')
         ]);
     }
 }
