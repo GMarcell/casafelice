@@ -27,13 +27,13 @@ class bookingController extends Controller
 
     public function showBookingForm()
     {
-        return view('book_room');
+        return view('booking/book_room');
     }
 
     public function edit($id)
     {
         $book = roomBookings::findOrFail($id);
-        return view('checkInFormbook', compact('book'));
+        return view('checkin/checkInFormbook', compact('book'));
     }
 
     public function update(Request $request, $id)
@@ -104,10 +104,10 @@ class bookingController extends Controller
 
         if ($simpanOccupancy && $simpanTraffics) {
             Session::flash('success', 'Check In Berhasil');
-            return redirect()->route('bookingList');
+            return redirect()->route('booking/bookingList');
         } else {
             Session::flash('errors', ['' => 'Check In Gagal']);
-            return redirect()->route('bookingList');
+            return redirect()->route('booking/bookingbookingList');
         }
     }
 
@@ -115,7 +115,7 @@ class bookingController extends Controller
     {
         $data = roomBookings::findOrFail($id);
         $data->delete();
-        return redirect('bookingList')->with('success', 'Data is successfully deleted');
+        return redirect('booking/bookingList')->with('success', 'Data is successfully deleted');
     }
 
     public function bookingroom(Request $request)

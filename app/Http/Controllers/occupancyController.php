@@ -19,12 +19,12 @@ class occupancyController extends Controller
         $data = [
             'occupancys' => $this->occupancys->getAllOccupancy(),
         ];
-        return view('occupancyList', $data);
+        return view('checkin/occupancyList', $data);
     }
 
     public function showCheckInForm()
     {
-        return view('CheckInFormEmpty');
+        return view('checkin/CheckInFormEmpty');
     }
 
     public function checkIn(Request $request)
@@ -78,10 +78,10 @@ class occupancyController extends Controller
 
         if ($simpan) {
             Session::flash('success', 'Check In Berhasil');
-            return redirect()->route('occupancyList');
+            return redirect()->route('checkin/occupancyList');
         } else {
             Session::flash('errors', ['' => 'Check In Gagal']);
-            return redirect()->route('occupancyList');
+            return redirect()->route('checkin/occupancyList');
         }
     }
 
@@ -89,6 +89,6 @@ class occupancyController extends Controller
     {
         $data = occupancys::findOrFail($id);
         $data->delete();
-        return redirect('occupancyList')->with('success', 'Data is successfully deleted');
+        return redirect('checkin/occupancyList')->with('success', 'Data is successfully deleted');
     }
 }

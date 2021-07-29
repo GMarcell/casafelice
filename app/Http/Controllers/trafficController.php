@@ -17,6 +17,6 @@ class trafficController extends Controller
         $data = [
             'traffics' => $this->traffics->getAllTraffic(),
         ];
-        return view('trafficList', $data);
+        return view('checkin/trafficList', $data);
     }
 }

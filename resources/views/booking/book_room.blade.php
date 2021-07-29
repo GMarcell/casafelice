@@ -54,7 +54,7 @@
                                         <div class="text-center">
                                             <h4 class="h4 text-900 mb-4" style="color: black;">Book A Room</h4>
                                         </div>
-                                        <form class="user" action="{{ route('book_room') }}" method="post">
+                                        <form class="user" action="{{ route('booking/book_room') }}" method="post">
                                             @csrf
                                             <div class="card-body">
                                                 @if(session('errors'))

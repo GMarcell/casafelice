@@ -96,7 +96,7 @@
                     <div class="portfolio-item">
                         <img class="img-fluid" src="{{ asset('img/dalam.jpeg') }}" alt="..." style="height: 350px;" />
                         <div class="portfolio-caption bg-gold">
-                            <div class="portfolio-caption-heading">Ruang Tunggu</div>
+                            <div class="portfolio-caption-heading">Ruang Tamu</div>
                             <div class="portfolio-caption-subheading text-muted">Lorem</div>
                         </div>
                     </div>

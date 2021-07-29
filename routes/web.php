@@ -24,7 +24,6 @@ Route::get('/', function () {
 });
 
 Route::get('home', [pagesController::class, 'index'])->name('home');
-Route::get('booking_detail', [pagesController::class, 'booking_detail'])->name('booking_detail');
 
 Route::get('book_room', [bookingController::class, 'showBookingForm'])->name('book_room');
 Route::post('book_room', [bookingController::class, 'bookingroom']);

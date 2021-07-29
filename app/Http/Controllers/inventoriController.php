@@ -17,11 +17,11 @@ class inventoriController extends Controller
         $data = [
             'inventori' => $this->inventori->getAllInventori(),
         ];
-        return view('inventoriList', $data);
+        return view('inventori/inventoriList', $data);
     }
 
     public function showinventoriForm()
     {
-        return view('inventoriForm');
+        return view('inventori/inventoriForm');
     }
 }

@@ -18,7 +18,7 @@ class authController extends Controller
             //Login Success
             return redirect()->route('home');
         }
-        return view('login');
+        return view('user/login');
     }
 
     public function login(Request $request)
@@ -61,7 +61,7 @@ class authController extends Controller
 
     public function showFormRegister()
     {
-        return view('register');
+        return view('user/register');
     }
 
     public function register(Request $request)
