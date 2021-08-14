@@ -15,11 +15,15 @@ class TandaPengenalTableSeeder extends Seeder
     public function run()
     {
         DB::table('tanda_pengenal')->insert([
-            'type_tanda_pengenal' => stringValue('KTP')
-        ], [
-            'type_tanda_pengenal' => stringValue('SIM')
-        ], [
-            'type_tanda_pengenal' => stringValue('PASSPORT')
+            'type_tanda_pengenal' => 'KTP'
+        ]);
+
+        DB::table('tanda_pengenal')->insert([
+            'type_tanda_pengenal' => 'SIM'
+        ]);
+
+        DB::table('tanda_pengenal')->insert([
+            'type_tanda_pengenal' => 'PASSPORT'
         ]);
     }
 }

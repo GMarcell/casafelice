@@ -14,34 +14,60 @@ class TipeInventoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('invemtory_type')->insert([
-            'inventory_name' => stringValue('Kamar')
-        ], [
-            'inventory_name' => stringValue('Perlangkapan Mandi')
-        ], [
-            'inventory_name' => stringValue('Listrik')
-        ], [
-            'inventory_name' => stringValue('Alat Komunikasi')
-        ], [
-            'inventory_name' => stringValue('Tuang Tamu & Ruang Bersama')
-        ], [
-            'inventory_name' => stringValue('Receptionis')
-        ], [
-            'inventory_name' => stringValue('Dapur')
-        ], [
-            'inventory_name' => stringValue('Laundy')
-        ], [
-            'inventory_name' => stringValue('Mejad & Kursi')
-        ], [
-            'inventory_name' => stringValue('Cadangan Material Gedung')
-        ], [
-            'inventory_name' => stringValue('Transportasi')
-        ], [
-            'inventory_name' => stringValue('Assesoris')
-        ], [
-            'inventory_name' => stringValue('Kunci Bangunan dll')
-        ], [
-            'inventory_name' => stringValue('Lainnya')
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Kamar'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Perlangkapan Mandi'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Listrik'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Alat Komunikasi'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Tuang Tamu & Ruang Bersama'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Receptionis'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Dapur'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Laundy'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Meja & Kursi'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Cadangan Material Gedung'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Transportasi'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Assesoris'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Kunci Bangunan dll'
+        ]);
+
+        DB::table('inventory_type')->insert([
+            'inventory_name' => 'Lainnya'
         ]);
     }
 }

@@ -15,11 +15,13 @@ class TipeRuanganTableSeeder extends Seeder
     public function run()
     {
         DB::table('tipe_ruangan')->insert([
-            'type' => stringValue('Standard Room'),
-            'price' => integerValue(250000)
-        ], [
-            'type' => stringValue('Deluxe Room'),
-            'price' => integerValue(300000)
+            'type' => 'Standard Room',
+            'price' => 250000
+        ]);
+
+        DB::table('tipe_ruangan')->insert([
+            'type' => 'Deluxe Room',
+            'price' => 300000
         ]);
     }
 }

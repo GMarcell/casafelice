@@ -15,9 +15,11 @@ class GenderTableSeeder extends Seeder
     public function run()
     {
         DB::table('gender')->insert([
-            'gender_type' => stringValue('Male')
-        ], [
-            'gender_type' => stringValue('Female')
+            'gender_type' => 'Male'
+        ]);
+
+        DB::table('gender')->insert([
+            'gender_type' => 'Female'
         ]);
     }
 }

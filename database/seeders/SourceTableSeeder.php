@@ -15,9 +15,11 @@ class SourceTableSeeder extends Seeder
     public function run()
     {
         DB::table('source')->insert([
-            'source_name' => stringValue('On The Spot')
-        ], [
-            'source_name' => stringValue('Online Travel Agent')
+            'source_name' => 'On The Spot'
+        ]);
+
+        DB::table('source')->insert([
+            'source_name' => 'Online Travel Agent'
         ]);
     }
 }
