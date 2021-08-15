@@ -26,8 +26,8 @@
                 <td>{{$inventory->inventory_name}}</td>
                 <td>{{$inventory->jumlah}}</td>
                 <td>
-                    <a href="#" class="badge rounded-pill bg-warning text-dark">Tambah</a>
-                    <a href="#" class="badge rounded-pill bg-success text-white">Kurang</a>
+                    <a href="{{ url('tambahinventoryform', $inventory->id)}}" class="badge rounded-pill bg-success text-white">Tambah</a>
+                    <a href="#" class="badge rounded-pill bg-warning text-dark">Kurang</a>
                     <a href="#" class="badge rounded-pill bg-danger text-white">Reset</a>
                 </td>
             </tr>

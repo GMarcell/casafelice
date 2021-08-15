@@ -13,7 +13,7 @@ class InventoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('inventory', function (Blueprint $table) {
+        Schema::create('inventorys', function (Blueprint $table) {
             $table->id();
             $table->integer('inventory_type');
             $table->integer('jumlah');

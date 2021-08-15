@@ -17,8 +17,8 @@ class inventorys extends Model
 
     public function getAllInventory()
     {
-        return DB::table('inventory')
-            ->leftJoin('inventory_type', 'inventory_type.inventory_type_id', '=', 'inventory.inventory_type')
+        return DB::table('inventorys')
+            ->leftJoin('inventory_type', 'inventory_type.inventory_type_id', '=', 'inventorys.inventory_type')
             ->get();
     }
 }
