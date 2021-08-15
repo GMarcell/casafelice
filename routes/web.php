@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\bookingController;
+use App\Http\Controllers\inventoryController;
 use App\Http\Controllers\occupancyController;
 use App\Http\Controllers\pagesController;
 use App\Http\Controllers\trafficController;
@@ -38,6 +39,8 @@ Route::post('checkIn', [occupancyController::class, 'checkIn']);
 Route::delete('checkin/cancel/{id}', [occupancyController::class, 'delete']);
 
 Route::get('trafficList', [trafficController::class, 'trafficList'])->name('trafficList');
+
+Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name('inventoryList');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

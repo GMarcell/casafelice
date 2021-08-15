@@ -88,7 +88,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="inventoriList">
+                <a class="nav-link" href="inventoryList">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Manajemen Inventori</span></a>
             </li>

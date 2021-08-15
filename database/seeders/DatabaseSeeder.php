@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
             SourceTableSeeder::class,
             TandaPengenalTableSeeder::class,
             TipeInventoryTableSeeder::class,
-            TipeRuanganTableSeeder::class
+            TipeRuanganTableSeeder::class,
+            InventoryTableSeeder::class
         ]);
     }
 }
