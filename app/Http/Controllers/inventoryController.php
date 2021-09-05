@@ -26,19 +26,4 @@ class inventoryController extends Controller
         $inventory = inventorys::findOrFail($id);
         return view('inventorytambah', compact('inventory'));
     }
-
-    public function tambahinventory(Request $request)
-    {
-        $rules = [
-            'banyak_barang'         => 'required'
-        ];
-
-        $messages = [
-            'banyak_barang.required' => 'Banyak Barang Wajib Diisi'
-        ];
-        $validator = Validator::make($request->all(), $rules, $messages);
-        if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput($request->all());
-        }
-    }
 }

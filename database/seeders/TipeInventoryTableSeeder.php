@@ -15,59 +15,73 @@ class TipeInventoryTableSeeder extends Seeder
     public function run()
     {
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Kamar'
+            'inventory_name' => 'Kamar',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Perlangkapan Mandi'
+            'inventory_name' => 'Perlangkapan Mandi',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Listrik'
+            'inventory_name' => 'Listrik',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Alat Komunikasi'
+            'inventory_name' => 'Alat Komunikasi',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Tuang Tamu & Ruang Bersama'
+            'inventory_name' => 'Tuang Tamu & Ruang Bersama',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Receptionis'
+            'inventory_name' => 'Receptionis',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Dapur'
+            'inventory_name' => 'Dapur',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Laundy'
+            'inventory_name' => 'Laundy',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Meja & Kursi'
+            'inventory_name' => 'Meja & Kursi',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Cadangan Material Gedung'
+            'inventory_name' => 'Cadangan Material Gedung',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Transportasi'
+            'inventory_name' => 'Transportasi',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Assesoris'
+            'inventory_name' => 'Assesoris',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Kunci Bangunan dll'
+            'inventory_name' => 'Kunci Bangunan dll',
+            'jumlah' => 0
         ]);
 
         DB::table('inventory_type')->insert([
-            'inventory_name' => 'Lainnya'
+            'inventory_name' => 'Lainnya',
+            'jumlah' => 0
         ]);
     }
 }

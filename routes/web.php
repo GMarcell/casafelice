@@ -41,7 +41,6 @@ Route::delete('checkin/cancel/{id}', [occupancyController::class, 'delete']);
 Route::get('trafficList', [trafficController::class, 'trafficList'])->name('trafficList');
 
 Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name('inventoryList');
-Route::get('tambahinventoryform/{id}', [inventoryController::class, 'tambahinventoryform'])->name('tambahinventoryform');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

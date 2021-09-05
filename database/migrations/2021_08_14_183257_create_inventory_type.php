@@ -16,6 +16,7 @@ class CreateInventoryType extends Migration
         Schema::create('inventory_type', function (Blueprint $table) {
             $table->id('inventory_type_id');
             $table->string('inventory_name');
+            $table->integer('jumlah');
             $table->timestamps();
         });
     }

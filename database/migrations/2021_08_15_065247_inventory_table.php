@@ -16,10 +16,8 @@ class InventoryTable extends Migration
         Schema::create('inventorys', function (Blueprint $table) {
             $table->id();
             $table->integer('inventory_type');
-            $table->integer('jumlah');
-            $table->integer('tambah');
-            $table->integer('kurang');
-            $table->timestamps();
+            $table->integer('invetory_action_type');
+            $table->integer('banyak_barang');
         });
     }
 
