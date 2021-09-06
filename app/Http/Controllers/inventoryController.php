@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\inventorys;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
 
 class inventoryController extends Controller
 {

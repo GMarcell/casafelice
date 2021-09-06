@@ -90,7 +90,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="inventoryList">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Manajemen Inventori</span></a>
+                    <span>Inventori List</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inventori Action</span></a>
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
