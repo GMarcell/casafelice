@@ -5,7 +5,7 @@
 <h1 class="h4 text-gray-800">List Occupancy</h1>
 
 
-<a href="checkInFormEmpty" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;" href> Check In </a>
+<a href="checkInFormEmpty" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;"> Check In </a>
 
 @if ($messages = Session::get('success'))
 <p>{{ $messages}}</p>

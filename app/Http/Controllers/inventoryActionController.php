@@ -19,4 +19,9 @@ class inventoryActionController extends Controller
         ];
         return view('inventory_action', $data);
     }
+
+    public function showAddInventoryActionForm()
+    {
+        return view('add_action_form');
+    }
 }
