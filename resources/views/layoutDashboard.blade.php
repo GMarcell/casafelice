@@ -94,7 +94,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="inventoryAction">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Inventori Action</span></a>
             </li>

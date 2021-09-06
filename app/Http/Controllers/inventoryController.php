@@ -18,10 +18,4 @@ class inventoryController extends Controller
         ];
         return view('inventoryList', $data);
     }
-
-    public function tambahinventoryform($id)
-    {
-        $inventory = inventorys::findOrFail($id);
-        return view('inventorytambah', compact('inventory'));
-    }
 }

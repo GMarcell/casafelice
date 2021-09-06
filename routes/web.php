@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\bookingController;
+use App\Http\Controllers\inventoryActionController;
 use App\Http\Controllers\inventoryController;
 use App\Http\Controllers\occupancyController;
 use App\Http\Controllers\pagesController;
@@ -41,6 +42,8 @@ Route::delete('checkin/cancel/{id}', [occupancyController::class, 'delete']);
 Route::get('trafficList', [trafficController::class, 'trafficList'])->name('trafficList');
 
 Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name('inventoryList');
+
+Route::get('inventoryAction', [inventoryActionController::class, 'inventoryActionList'])->name('inventoryAction');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
