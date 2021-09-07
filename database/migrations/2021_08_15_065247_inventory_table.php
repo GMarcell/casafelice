@@ -17,6 +17,7 @@ class InventoryTable extends Migration
             $table->id();
             $table->integer('inventory_type');
             $table->integer('jumlah');
+            $table->timestamps();
         });
     }
 

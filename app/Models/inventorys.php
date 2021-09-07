@@ -10,7 +10,9 @@ class inventorys extends Model
 {
     use HasFactory;
 
-    protected $fillable = [];
+    protected $fillable = [
+        'jumlah'
+    ];
 
     public function getAllInventory()
     {

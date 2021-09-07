@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\inventoryAction;
+use App\Models\inventorys;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -52,6 +53,25 @@ class inventoryActionController extends Controller
         $action->inventory_action_type = $request->inventory_action_type;
         $action->banyak_barang = $request->jumlah;
         $simpan = $action->save();
+
+        $tipeinv = inventorys::findOrFail($request->inventory_type);
+        if ($request->inventory_action_type == 1) {
+            //tambahin di list inventory
+            //update di list inventory
+            $jumlah_barang = $tipeinv->jumlah;
+            $total = $jumlah_barang + $request->jumlah;
+            $tipeinv->update([
+                'jumlah' => $total
+            ]);
+        } else {
+            // kurangin jumlah di list inventory
+            //update di list inventory
+            $jumlah_barang = $tipeinv->jumlah;
+            $total = $jumlah_barang - $request->jumlah;
+            $tipeinv->update([
+                'jumlah' => $total
+            ]);
+        }
 
         if ($simpan) {
             Session::flash('success', 'Tindakan Berhasil');

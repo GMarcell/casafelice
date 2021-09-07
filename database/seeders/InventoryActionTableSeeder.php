@@ -15,11 +15,11 @@ class InventoryActionTableSeeder extends Seeder
     public function run()
     {
         DB::table('inventory_action_type')->insert([
-            'inventory_action_name' => 'Masuk'
+            'inventory_action_name' => 'Barang Masuk'
         ]);
 
         DB::table('inventory_action_type')->insert([
-            'inventory_action_name' => 'Keluar'
+            'inventory_action_name' => 'Barang Keluar'
         ]);
     }
 }
