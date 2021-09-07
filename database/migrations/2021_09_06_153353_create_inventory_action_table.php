@@ -13,7 +13,7 @@ class CreateInventoryActionTable extends Migration
      */
     public function up()
     {
-        Schema::create('inventory_action', function (Blueprint $table) {
+        Schema::create('inventory_actions', function (Blueprint $table) {
             $table->id();
             $table->integer('inventory_type');
             $table->integer('inventory_action_type');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\inventoryAction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class inventoryActionController extends Controller
 {
@@ -23,5 +25,40 @@ class inventoryActionController extends Controller
     public function showAddInventoryActionForm()
     {
         return view('add_action_form');
+    }
+
+    public function addaction(Request $request)
+    {
+        $rules = [
+            'inventory_type'            => 'required',
+            'inventory_action_type'     => 'required',
+            'jumlah'                    => 'required'
+        ];
+
+        $messages = [
+            'inventory_type'            => 'Tipe Inventory Harus Diisi',
+            'inventory_action_type'     => 'Tipe Tindakan Harus Diisi',
+            'jumlah'                    => 'Banyak Barang Harus Diisi'
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput($request->all());
+        }
+
+        $action = new inventoryAction;
+        $action->inventory_type = $request->inventory_type;
+        $action->inventory_action_type = $request->inventory_action_type;
+        $action->banyak_barang = $request->jumlah;
+        $simpan = $action->save();
+
+        if ($simpan) {
+            Session::flash('success', 'Tindakan Berhasil');
+            return redirect()->route('inventoryActionList');
+        } else {
+            Session::flash('errors', ['' => 'Tindakan Gagal']);
+            return redirect()->route('addInventoryAction');
+        }
     }
 }

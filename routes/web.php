@@ -43,8 +43,9 @@ Route::get('trafficList', [trafficController::class, 'trafficList'])->name('traf
 
 Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name('inventoryList');
 
-Route::get('inventoryAction', [inventoryActionController::class, 'inventoryActionList'])->name('inventoryAction');
+Route::get('inventoryActionList', [inventoryActionController::class, 'inventoryActionList'])->name('inventoryActionList');
 Route::get('addInventoryAction', [inventoryActionController::class, 'showAddInventoryActionForm'])->name('addInventoryAction');
+Route::post('addaction', [inventoryActionController::class, 'addaction']);
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

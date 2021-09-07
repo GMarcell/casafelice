@@ -15,7 +15,7 @@
 </div>
 @endif
 
-<form method="post" action="{{ url('') }}">
+<form method="post" action="{{ url('addaction') }}">
     @csrf
     <div class="modal-body">
         <div class="form-group">
@@ -43,8 +43,8 @@
             <label for="inventory_action_type" class="label-form">Tipe Tindakan:</label><br>
             <select id="inventory_action_type" class="form-control" name="inventory_action_type">
                 <option value="" disabled selected> Choose Action Type</option>
-                <option value="1">Masuk</option>
-                <option value="2">Keluar</option>
+                <option value="1">Barang Masuk</option>
+                <option value="2">Barang Keluar</option>
             </select>
         </div>
 
@@ -54,7 +54,7 @@
         </div>
 
         <button type="submit" class="btn bg-gold btn-xl text-uppercase" style="color: antiquewhite;">
-            <strong>Check In</strong>
+            <strong>SUBMIT</strong>
         </button>
     </div>
 </form>
