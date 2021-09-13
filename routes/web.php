@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\authcontroller;
 use App\Http\Controllers\bookingController;
+use App\Http\Controllers\financeController;
 use App\Http\Controllers\inventoryActionController;
 use App\Http\Controllers\inventoryController;
 use App\Http\Controllers\occupancyController;
 use App\Http\Controllers\pagesController;
 use App\Http\Controllers\trafficController;
+use App\Models\finance;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +48,8 @@ Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name
 Route::get('inventoryActionList', [inventoryActionController::class, 'inventoryActionList'])->name('inventoryActionList');
 Route::get('addInventoryAction', [inventoryActionController::class, 'showAddInventoryActionForm'])->name('addInventoryAction');
 Route::post('addaction', [inventoryActionController::class, 'addaction']);
+
+Route::get('bookkeeping', [financeController::class, 'bookkeeping'])->name('bookkeeping');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

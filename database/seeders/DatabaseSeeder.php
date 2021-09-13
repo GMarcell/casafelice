@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             TipeInventoryTableSeeder::class,
             TipeRuanganTableSeeder::class,
             InventoryTableSeeder::class,
-            InventoryActionTableSeeder::class
+            InventoryActionTableSeeder::class,
+            Tipe_Finance::class
         ]);
     }
 }

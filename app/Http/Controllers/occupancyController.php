@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\finance;
 use App\Models\occupancys;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;

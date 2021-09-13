@@ -35,7 +35,7 @@
                     <form method="POST" action="{{ url('booking/delete', $booking->id )}}">
                         @csrf
                         @method('delete')
-                        <button class="badge badge-danger">Delete</button>
+                        <button style="border: none;" class="badge badge-danger">Delete</button>
                     </form>
                 </td>
             </tr>

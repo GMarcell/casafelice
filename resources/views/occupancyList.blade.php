@@ -51,8 +51,7 @@
                         <form method="POST" action="{{ url('checkin/cancel', $occupan->id)}}">
                             @csrf
                             @method('delete')
-                            <button class="badge badge-danger">Delete</button>
-
+                            <button style="border: none;" class="badge badge-danger">Delete</button>
                         </form>
                     </td>
                 </tr>
