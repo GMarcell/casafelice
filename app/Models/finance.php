@@ -12,8 +12,8 @@ class finance extends Model
 
     public function getAllFinance()
     {
-        return DB::table('finance')
-            ->leftJoin('tipe_finance', 'tipe_finance.id_tipe_finance', '=', 'finance.tipe')
+        return DB::table('finances')
+            ->leftJoin('tipe_finance', 'tipe_finance.id_tipe_finance', '=', 'finances.tipe')
             ->get();
     }
 }

@@ -50,6 +50,7 @@ Route::get('addInventoryAction', [inventoryActionController::class, 'showAddInve
 Route::post('addaction', [inventoryActionController::class, 'addaction']);
 
 Route::get('bookkeeping', [financeController::class, 'bookkeeping'])->name('bookkeeping');
+Route::get('checkout/{id}', [financeController::class, 'checkout'])->name('checkout');
 
 Route::get('login', [AuthController::class, 'showFormLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);

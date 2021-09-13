@@ -46,7 +46,7 @@
                     <td>{{$occupan->email}}</td>
                     <td>{{$occupan->check_out_date}}</td>
                     <td>
-                        <a class="badge badge-success" href="">Check Out</a>
+                        <a class="badge badge-success" href="{{ url('checkout', $occupan->id) }}">Check Out</a>
                         <a class="badge badge-warning" href="">Edit</a>
                         <form method="POST" action="{{ url('checkin/cancel', $occupan->id)}}">
                             @csrf
