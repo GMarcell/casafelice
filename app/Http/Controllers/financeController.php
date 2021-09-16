@@ -25,23 +25,24 @@ class financeController extends Controller
 
     public function checkout(Request $request, $id)
     {
+        $data = occupancys::findOrFail($id);
+
         $finance = new finance;
         $finance->keterangan = 'Pemasukan Guest House';
         $finance->tipe = 1;
-        $checkin = new DateTime($request->check_in_date);
-        $checkout = new DateTime($request->check_out_date);
-        $diff = date_diff($checkin, $checkout);
-        $days = $diff->format('%a');
-        if ($request->room_type == 1) {
+        $checkin = strtotime($data->check_in_date);
+        $checkout = strtotime($data->check_out_date);
+        $diff = abs($checkout - $checkin);
+        $days = ceil($diff / (60 * 60 * 24));
+        if ($data->room_type == 1) {
             $jumlah = $days * 250000;
         } else {
             $jumlah = $days * 350000;
         }
-        $finance->pemasukan = $days;
+        $finance->pemasukan = $jumlah;
         $finance->pengeluaran = 0;
         $simpan = $finance->save();
 
-        $data = occupancys::findOrFail($id);
         $data->delete();
 
         if ($simpan) {
