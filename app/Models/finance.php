@@ -17,9 +17,15 @@ class finance extends Model
             ->get();
     }
 
-    public function sumtotal()
+    public function totalpemasukan()
     {
         return DB::table('finances')
             ->sum('finances.pemasukan');
+    }
+
+    public function totalpengeluaran()
+    {
+        return DB::table('finances')
+            ->sum('finances.pengeluaran');
     }
 }

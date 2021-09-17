@@ -32,7 +32,7 @@
             @endforeach
             <tr>
                 <td colspan="3">Total</td>
-                <td>Jumlah Pengeluaran</td>
+                <td>{{$totalpengeluaran}}</td>
                 <td>{{$totalsum}}</td>
             </tr>
         </tbody>
