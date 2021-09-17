@@ -33,7 +33,7 @@
             <tr>
                 <td colspan="3">Total</td>
                 <td>{{$totalpengeluaran}}</td>
-                <td>{{$totalsum}}</td>
+                <td>{{$totalpemasukan}}</td>
             </tr>
         </tbody>
     </table>
