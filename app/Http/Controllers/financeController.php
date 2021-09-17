@@ -18,7 +18,8 @@ class financeController extends Controller
     public function bookkeeping()
     {
         $data = [
-            'bookkeeping' => $this->finance->getAllFinance()
+            'bookkeeping' => $this->finance->getAllFinance(),
+            'totalsum' => $this->finance->sumtotal()
         ];
         return view('bookkeeping', $data);
     }

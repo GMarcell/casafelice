@@ -16,4 +16,10 @@ class finance extends Model
             ->leftJoin('tipe_finance', 'tipe_finance.id_tipe_finance', '=', 'finances.tipe')
             ->get();
     }
+
+    public function sumtotal()
+    {
+        return DB::table('finances')
+            ->sum('finances.pemasukan');
+    }
 }
