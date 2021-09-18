@@ -20,7 +20,7 @@ class financeController extends Controller
         $data = [
             'bookkeeping' => $this->finance->getAllFinance(),
             'totalpemasukan' => $this->finance->totalpemasukan(),
-            'totalpengeluaran' => $this->finance->tatalpengeluaran()
+            'totalpengeluaran' => $this->finance->totalpengeluaran()
         ];
         return view('bookkeeping', $data);
     }

@@ -46,8 +46,9 @@ Route::get('trafficList', [trafficController::class, 'trafficList'])->name('traf
 Route::get('inventoryList', [inventoryController::class, 'inventoryList'])->name('inventoryList');
 
 Route::get('inventoryActionList', [inventoryActionController::class, 'inventoryActionList'])->name('inventoryActionList');
-Route::get('addInventoryAction', [inventoryActionController::class, 'showAddInventoryActionForm'])->name('addInventoryAction');
-Route::post('addaction', [inventoryActionController::class, 'addaction']);
+Route::get('barangKeluar', [inventoryActionController::class, 'showbarangKeluarForm'])->name('barangKeluar');
+Route::get('barangMasuk', [inventoryActionController::class, 'showbarangMasukForm'])->name('barangMasuk');
+Route::post('barang_masuk', [inventoryActionController::class, 'barang_masuk']);
 
 Route::get('bookkeeping', [financeController::class, 'bookkeeping'])->name('bookkeeping');
 Route::get('checkout/{id}', [financeController::class, 'checkout'])->name('checkout');

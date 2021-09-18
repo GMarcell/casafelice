@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1 class="h3 mb-4 text-gray-800">Add Action Form</h1>
+<h1 class="h3 mb-4 text-gray-800">Barang Masuk Form</h1>
 <hr>
 
 @if(session('errors'))
@@ -15,7 +15,7 @@
 </div>
 @endif
 
-<form method="post" action="{{ url('addaction') }}">
+<form method="post" action="{{ url('barang_masuk') }}">
     @csrf
     <div class="modal-body">
         <div class="form-group">
@@ -40,17 +40,13 @@
         </div>
 
         <div class="form-group">
-            <label for="inventory_action_type" class="label-form">Tipe Tindakan:</label><br>
-            <select id="inventory_action_type" class="form-control" name="inventory_action_type">
-                <option value="" disabled selected> Choose Action Type</option>
-                <option value="1">Barang Masuk</option>
-                <option value="2">Barang Keluar</option>
-            </select>
+            <label for="jumlah" class="label-form">Banyak Barang:</label>
+            <input type="number" class="form-control" id="jumlah" name="jumlah">
         </div>
 
         <div class="form-group">
-            <label for="jumlah" class="label-form">Banyak Barang:</label>
-            <input type="number" class="form-control" id="jumlah" name="jumlah">
+            <label for="harga" class="label-form">Harga per Barang:</label>
+            <input type="number" class="form-control" id="harga" name="harga">
         </div>
 
         <button type="submit" class="btn bg-gold btn-xl text-uppercase" style="color: antiquewhite;">

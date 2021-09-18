@@ -4,7 +4,8 @@
 
 <h1 class="h4 text-gray-800">List Inventory Action</h1>
 
-<a href="addInventoryAction" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;">Add Action</a>
+<a href="barangMasuk" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;">Barang Masuk</a>
+<a href="barangKeluar" class="btn bg-gold btn-xl text-uppercase mb-2" style="color: antiquewhite;">Barang Keluar</a>
 
 @if ($messages = Session::get('success'))
 <p>{{ $messages}}</p>
